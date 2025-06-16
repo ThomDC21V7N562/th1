@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In số từ 1 đến 10</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        
+        body {
+            font-family: "Inter", sans-serif;
+            @apply bg-gray-100 flex justify-center items-center min-h-screen p-4;
+        }
+        .container {
+            @apply bg-white p-8 rounded-xl shadow-lg text-center max-w-md w-full;
+        }
+        h1 {
+            @apply text-3xl font-bold text-gray-800 mb-6;
+        }
+        ul {
+            @apply list-none p-0 m-0; 
+        }
+        li {
+            @apply text-lg text-gray-700 py-1 border-b border-gray-200 last:border-b-0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>In số từ 1 đến 10 bằng vòng lặp</h1>
+        
+        <ul id="numberList">
+
+        </ul>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const numberList = document.getElementById('numberList');
+
+            for (let i = 1; i <= 10; i++) {
+                const listItem = document.createElement('li');
+                listItem.textContent = i + '. '; 
+                numberList.appendChild(listItem);
+            }
+        });
+    </script>
+
+</body>
+</html>
